@@ -1,0 +1,171 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "devcamp-2687386",
+    "dateExported": "2023-10-20T23:12:55.332Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "c981b62c-3728-4736-a055-a568c4716fbc",
+            "name": "Bootcamps",
+            "containerId": "",
+            "created": "2023-10-20T23:00:04.021Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "b72bc8dc-e4f6-4dda-8cac-52dc2f765820",
+            "name": "cursos",
+            "containerId": "",
+            "created": "2023-10-20T23:00:17.653Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "18028b9c-a980-4f47-a653-a533664caf5f",
+            "name": "usuarios",
+            "containerId": "",
+            "created": "2023-10-20T23:00:27.254Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "862ae811-5d45-4c57-b8cf-49a956a077f8",
+            "colId": "25c0b4a0-f486-4c30-b1b0-f89cd3bc8987",
+            "containerId": "c981b62c-3728-4736-a055-a568c4716fbc",
+            "name": "traer todos los bootcamps",
+            "url": "http://127.0.0.1:5000/bootcamps",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-20T22:38:48.373Z",
+            "modified": "2023-10-20T22:40:19.596Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "84626a50-b2c2-475c-9996-c2c82d486155",
+            "colId": "25c0b4a0-f486-4c30-b1b0-f89cd3bc8987",
+            "containerId": "c981b62c-3728-4736-a055-a568c4716fbc",
+            "name": "traer bootcamp por id",
+            "url": "http://127.0.0.1:5000/bootcamps/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-20T22:45:40.055Z",
+            "modified": "2023-10-20T22:45:48.013Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4f028884-0329-4650-b4a8-194e803bf414",
+            "colId": "25c0b4a0-f486-4c30-b1b0-f89cd3bc8987",
+            "containerId": "c981b62c-3728-4736-a055-a568c4716fbc",
+            "name": "Crear bootcamp",
+            "url": "http://127.0.0.1:5000/bootcamps",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-20T22:54:13.425Z",
+            "modified": "2023-10-20T22:54:29.657Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7876591e-0030-4997-9630-4a6b5567e592",
+            "colId": "25c0b4a0-f486-4c30-b1b0-f89cd3bc8987",
+            "containerId": "c981b62c-3728-4736-a055-a568c4716fbc",
+            "name": "actualizar bootcamp por id",
+            "url": "http://127.0.0.1:5000/bootcamps/1",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-10-20T22:57:06.152Z",
+            "modified": "2023-10-20T22:57:38.580Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "27ca1dce-35ac-4008-b274-fbefe3125348",
+            "colId": "25c0b4a0-f486-4c30-b1b0-f89cd3bc8987",
+            "containerId": "c981b62c-3728-4736-a055-a568c4716fbc",
+            "name": "eliminar bootcamp",
+            "url": "http://127.0.0.1:5000/bootcamps/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-10-20T22:58:38.278Z",
+            "modified": "2023-10-20T22:58:49.466Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "35f1fbe7-2d2c-4a7b-bcc0-14c13b614e20",
+            "colId": "25c0b4a0-f486-4c30-b1b0-f89cd3bc8987",
+            "containerId": "b72bc8dc-e4f6-4dda-8cac-52dc2f765820",
+            "name": "Mostrar cursos",
+            "url": "http://127.0.0.1:5000/courses",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-10-20T23:04:57.642Z",
+            "modified": "2023-10-20T23:12:30.299Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5ccbdabe-f4fa-4376-b6d6-01ef48fccba0",
+            "colId": "25c0b4a0-f486-4c30-b1b0-f89cd3bc8987",
+            "containerId": "b72bc8dc-e4f6-4dda-8cac-52dc2f765820",
+            "name": "mostrar un curso por id",
+            "url": "http://127.0.0.1:5000/courses/1",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-10-20T23:08:45.011Z",
+            "modified": "2023-10-20T23:12:35.471Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a2a34bc1-57c7-42e4-8a03-094b415157d0",
+            "colId": "25c0b4a0-f486-4c30-b1b0-f89cd3bc8987",
+            "containerId": "b72bc8dc-e4f6-4dda-8cac-52dc2f765820",
+            "name": "crear un curso",
+            "url": "http://127.0.0.1:5000/courses",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-10-20T23:09:28.029Z",
+            "modified": "2023-10-20T23:12:40.161Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a7e315d8-5488-45db-b48a-02c0150b5010",
+            "colId": "25c0b4a0-f486-4c30-b1b0-f89cd3bc8987",
+            "containerId": "b72bc8dc-e4f6-4dda-8cac-52dc2f765820",
+            "name": "actualizar un curso por id",
+            "url": "http://127.0.0.1:5000/courses/1",
+            "method": "PUT",
+            "sortNum": 120000,
+            "created": "2023-10-20T23:10:16.932Z",
+            "modified": "2023-10-20T23:12:45.216Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "91f1e6c6-0699-45bc-87df-535863ade4b1",
+            "colId": "25c0b4a0-f486-4c30-b1b0-f89cd3bc8987",
+            "containerId": "b72bc8dc-e4f6-4dda-8cac-52dc2f765820",
+            "name": "eliminar curso por id",
+            "url": "http://127.0.0.1:5000/courses/1",
+            "method": "DELETE",
+            "sortNum": 130000,
+            "created": "2023-10-20T23:10:47.188Z",
+            "modified": "2023-10-20T23:12:51.021Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
