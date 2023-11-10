@@ -3,6 +3,8 @@ const dotenv= require ('dotenv') //leer archivos env
 const colors=require('colors')
 const conectarDB = require('./config/db')
 const bootcampRoutes= require('./routes/bootcampRoutes')
+const courseRoutes= require('./routes/coursesRoutes')
+const reviewRoutes= require('./routes/reviewsRoutes')
 
 
 //vincular el archivo .env
@@ -19,6 +21,11 @@ app.use(express.json())
 app.use('/api/v1/devcamp/bootcamps',
         bootcampRoutes)
 
+app.use('/api/v1/devcamp/courses',
+        courseRoutes)
+app.use('/api/v1/devcamp/reviews',
+        reviewRoutes)
+        
 //rutas de prueba
 app.get('/prueba',(request, response)=>{
     response.send("Hola")
@@ -36,44 +43,7 @@ app.get('/prueba/:id',(request, response)=>{
 
 //--------------------------------- ENDPOINTS CURSOS ------------------------------
 //listar todos los courses
-app.get('/courses', (req, res)=>{
-    res.json({
-        success: true,
-        message:"aqui se mostraran todos los courses"
-    })
-})
 
-//traer curso por id
-app.get('/courses/:id', (req, res)=>{
-    res.json({
-        success: true,
-        message: `aqui se mostraran todos los courses cuyo id es ${req.params.id}`
-    })
-})
-
-//crear un curso
-app.post('/courses', (req, res)=>{
-    res.json({
-        success: true,
-        message:"aqui se crearan todos los courses"
-    })
-})
-
-//editar un curso por id 
-app.put('/courses/:id', (req, res)=>{
-    res.json({
-        success: true,
-        message: `aqui se actualizara todos los courses cuyo id es ${req.params.id}`
-    })
-})
-
-//eliminar un curso por id 
-app.delete('/courses/:id', (req, res)=>{
-    res.json({
-        success: true,
-        message: `aqui se eliminara todos los courses cuyo id es ${req.params.id}`
-    })
-})
 
 //funcion para llamar el puerto
 app.listen( process.env.PUERTO,()=>{
