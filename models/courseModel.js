@@ -46,7 +46,14 @@ const CourseSchema = new mongoose.Schema({
         required:[
             true,
             "Habilidad minima requerida"
-        ]
+        ],
+        enum:[
+            "Beginner",
+            "Intermediated",
+            "Advanced",
+            "Expert"
+        ] 
+
 
     }
 })
