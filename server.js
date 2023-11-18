@@ -5,6 +5,7 @@ const conectarDB = require('./config/db')
 const bootcampRoutes= require('./routes/bootcampRoutes')
 const courseRoutes= require('./routes/coursesRoutes')
 const reviewRoutes= require('./routes/reviewsRoutes')
+const userRoutes= require('./routes/userRoutes')
 
 
 //vincular el archivo .env
@@ -21,19 +22,14 @@ app.use(express.json())
 app.use('/api/v1/devcamp/bootcamps',
         bootcampRoutes)
 
+app.use('/api/v1/devcamp/auth',
+        userRoutes)
+
 app.use('/api/v1/devcamp/courses',
         courseRoutes)
 app.use('/api/v1/devcamp/reviews',
         reviewRoutes)
         
-//rutas de prueba
-app.get('/prueba',(request, response)=>{
-    response.send("Hola")
-})
-
-app.get('/prueba/:id',(request, response)=>{
-    response.send(`Hola, ${request.params.id }`)
-})
 
 //rutas de bootcamps 
 //endpoint
