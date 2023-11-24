@@ -1,11 +1,12 @@
-const express =require('express')
-const dotenv= require ('dotenv') //leer archivos env
-const colors=require('colors')
+const express = require('express')
+const dotenv = require ('dotenv') //leer archivos env
+const colors =require('colors')
 const conectarDB = require('./config/db')
-const bootcampRoutes= require('./routes/bootcampRoutes')
-const courseRoutes= require('./routes/coursesRoutes')
-const reviewRoutes= require('./routes/reviewsRoutes')
-const userRoutes= require('./routes/userRoutes')
+const bootcampRoutes = require('./routes/bootcampRoutes')
+const courseRoutes = require('./routes/coursesRoutes')
+const reviewRoutes = require('./routes/reviewsRoutes')
+const userRoutes = require('./routes/userRoutes')
+const cookieParser = require('cookie-parser')
 
 
 //vincular el archivo .env
@@ -18,6 +19,7 @@ conectarDB()
 //construir el objeto de la app
 app=express()
 app.use(express.json())
+app.use(cookieParser())
 
 app.use('/api/v1/devcamp/bootcamps',
         bootcampRoutes)

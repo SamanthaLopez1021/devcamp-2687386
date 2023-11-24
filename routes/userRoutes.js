@@ -8,10 +8,12 @@ router.post('/register', async (req,res)=> {
 
     try{
         const user = await UserModel.create(req.body)
-
+        //crear el token
+        const token = user.generarJWT()
         res.status(201).json({
             success: true,
-            data: user
+            data: user,
+            token_jwt: token
         })
     }catch(error){
         res.status(500).json({
@@ -47,13 +49,22 @@ if(!email || !password){
     } else {
         //3.Si la contraseña es incorrecta con un usuario existente
         const isMatch = await user.compararPassword(password)
+        //crear con opciones las cookies 
+        
         if(isMatch){
+            const token = user.generarJWT()
+            const options = {
+                expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+                httpOnly:true,
+            }
             return res.status(200)
-                .json({
-                    success: true, 
-                    msg: 'Usuario logeado',
-                    data: user
-                })
+                    .cookie('token', token, options)
+                    .json({
+                        success: true, 
+                        msg: 'Usuario logeado',
+                        data: user,
+                        jwt_token:token
+                    })
         }else{
             return res.status(400)
                 .json({

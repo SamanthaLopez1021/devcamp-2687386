@@ -49,5 +49,18 @@
     return bcryptjs.compare(password, this.password)
   }
 
+  //meotodo para crear el JWT
+  userSchema.methods.generarJWT = function(){
+     return jwt.sign({
+      id: this._id,
+      email: this.email
+                  },
+      process.env.JWT_SECRET_KEY,
+      {
+        expiresIn: process.env.JWT_EXPIRE
+      }
+      )
+  }
+
 module.exports = mongoose.model('User',userSchema)
   
