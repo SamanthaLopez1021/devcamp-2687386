@@ -2,7 +2,7 @@ const express =require('express')
 const BootcampModel = require('../models/bootcampModel')
 const mongoose = require('mongoose')
 //dependencias de middleware 
-const {protect, authorized} =require('../middleware/auth')
+const {protect, authorize} =require('../middleware/auth')
 const router=express.Router()
 
 
@@ -93,7 +93,7 @@ router.get('/:id', async (req, res)=>{
 })
 
 //crear un bootcamp
-router.post('/', protect , async (req, res)=>{
+router.post('/', protect, authorize ("publisher"), async (req, res)=>{
     //el nuevo bootcamp vendra a traves del body del cliente
     try {
         const newBootcamp = 
